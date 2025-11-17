@@ -62,14 +62,178 @@ export default function Content() {
         </div>
 
         
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex  justify-center">
           <img
-            src="/woman.png"
+            src="/now.png"
             alt="Woman"
-            className="w-[700px] h-auto object-cover rounded-xl"
+            className="w-[700px] h-auto mt-20 object-cover rounded-xl"
           />
         </div>
       </div>
+
+
+
+
+
+ {/* Popular Courses Section with Left Sidebar */}
+<section className="mt-20">
+  <h2 className="text-center text-gray-500 tracking-wide mb-6">POPULAR COURSES</h2>
+
+  <div className="flex flex-col lg:flex-row gap-8">
+    {/* LEFT SIDEBAR */}
+    <aside className="w-full lg:w-80 bg-white  rounded-xl shadow p-4">
+      <h3 className="text-2xl font-bold mb-4">Choose a top-rated program</h3>
+
+      <ul className="space-y-2">
+        <li className="flex items-center justify-between p-3 bg-[#F7F7FB] rounded-md">
+          <span className="flex items-center gap-3">
+            <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            Popular Courses
+          </span>
+          <span className="text-gray-400">›</span>
+        </li>
+
+        <li className="p-3 rounded-md hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.2"/></svg>
+          AI & Machine Learning
+        </li>
+
+        <li className="p-3 rounded-md hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.2"/></svg>
+          Data Science & Analytics
+        </li>
+
+        <li className="p-3 rounded-md hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="1.2"/></svg>
+          Generative AI
+        </li>
+
+        <li className="p-3 rounded-md hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" stroke="currentColor" strokeWidth="0.8" fill="none"/></svg>
+          Software & Tech
+        </li>
+
+        <li className="p-3 rounded-md hover:bg-gray-50 cursor-pointer flex items-center gap-3">
+          <svg className="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 100 10 5 5 0 000-10zM3 22c3-5 9-7 9-7s6 2 9 7" stroke="currentColor" strokeWidth="0.9" fill="none"/></svg>
+          Healthcare
+        </li>
+
+        <li className="mt-3 text-center">
+          <button className="text-sm px-3 py-1 border rounded-md hover:bg-gray-100">Show more</button>
+        </li>
+      </ul>
+    </aside>
+
+    {/* RIGHT: Cards Grid */}
+    <div className="flex-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        {/* Course Card - reuseable pattern; create as many as you need */}
+        {[
+          {
+            title: "PG Program in Artificial Intelligence and Machine Learning",
+            subtitle: "7 months · Online · Weekend",
+            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900"
+          },
+          {
+            title: "No Code AI and Machine Learning: Building Data Science Solutions",
+            subtitle: "12 weeks · Online · Weekend",
+            img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900"
+          },
+          {
+            title: "Applied AI and Data Science Program",
+            subtitle: "14 weeks · Live Online · Weekdays",
+            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900"
+          },
+          {
+            title: "Data Science and Machine Learning Program",
+            subtitle: "12 weeks · Online · Weekend",
+            img: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900"
+          },
+          {
+            title: "Applied AI and Data Science Program",
+            subtitle: "14 weeks · Live Online · Weekdays",
+            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900"
+          },
+          {
+            title: "Applied AI and Data Science Program",
+            subtitle: "14 weeks · Live Online · Weekdays",
+            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900"
+          }
+        ].map((course, i) => (
+          <article key={i} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+            <img className="w-full h-44 object-cover" src={course.img} alt={course.title} />
+            <div className="p-4">
+              <p className="text-xs uppercase text-gray-400 tracking-wide mb-2">MCCOMBS SCHOOL OF BUSINESS</p>
+              <h4 className="font-semibold text-lg leading-tight">{course.title}</h4>
+              <p className="text-sm text-gray-500 mt-2">{course.subtitle}</p>
+              <button className="mt-4 text-[#8E36CF] font-semibold">View Program</button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{/* Invest in Yourself Section */}
+<section className="mt-28 text-center px-6">
+  
+  <p className="text-sm font-semibold tracking-wider text-purple-600">
+    YOUR GOALS ARE OUR GOALS
+  </p>
+
+  <h1 className="text-4xl lg:text-5xl font-extrabold text-[#0A1A2F] leading-tight mt-3">
+    Invest in yourself today. <br /> 
+    Unlock success for a lifetime.
+  </h1>
+
+  <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+    Great Learning offers a unique blend of learning methods — including lectures 
+    from top faculty, group discussions and mentoring sessions, that keep learners 
+    motivated every step of the way.
+  </p>
+
+  {/* Stats */}
+  <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-20 max-w-4xl mx-auto">
+
+    <div>
+      <h2 className="text-3xl font-extrabold text-orange-500">9 Million</h2>
+      <p className="text-xs tracking-widest text-gray-500 mt-2">
+        STUDENTS ENROLLED
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-3xl font-extrabold text-orange-500">96%</h2>
+      <p className="text-xs tracking-widest text-gray-500 mt-2">
+        SATISFACTION RATE
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-3xl font-extrabold text-orange-500">91%</h2>
+      <p className="text-xs tracking-widest text-gray-500 mt-2">
+        PROGRAM COMPLETION RATE
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-3xl font-extrabold text-orange-500">4.6/5</h2>
+      <p className="text-xs tracking-widest text-gray-500 mt-2">
+        FACULTY RATING
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
 
       
       <main className="mt-20">
@@ -93,8 +257,15 @@ export default function Content() {
           </div>
         </div>
 
+
+
+  
+
+
+
+
         
-        <div className="mt-[-5px] grid grid-cols-2 p-9  text-sm sm:grid-cols-4 lg:grid-cols-5 gap-9">
+        <div className="mt-[20px] grid grid-cols-2   text-sm sm:grid-cols-4 lg:grid-cols-5 gap-9">
           {projects.map((project, index) => (
             <Card key={index} {...project} />
             
